@@ -43,6 +43,9 @@
     <Filter Include="Arquivos de Origem\Entidades\Personagens">
       <UniqueIdentifier>{93842a30-085d-459a-b2fc-cddc4f58cfef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Gerenciadores">
+      <UniqueIdentifier>{8348b00d-4305-4325-8c58-2b1f10298bc2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -104,6 +107,9 @@
     </ClCompile>
     <ClCompile Include="Entidade.cpp">
       <Filter>Arquivos de Origem\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Gerenciador_Grafico.cpp">
+      <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +175,9 @@
     </ClInclude>
     <ClInclude Include="Obst_C.h">
       <Filter>Arquivos de Cabeçalho\Entidades\Obstaculos</Filter>
+    </ClInclude>
+    <ClInclude Include="Gerenciador_Grafico.h">
+      <Filter>Arquivos de Cabeçalho\Gerenciadores</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

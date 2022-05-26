@@ -1,7 +1,8 @@
 #include "Jogo.h"
 
 Jogo::Jogo():
-	window(sf::VideoMode(400, 400), "Jogo!")
+window(sf::VideoMode(400, 400), "Jogo!"),
+GerenciadorGrafico()
 {
     player1 = new Jogador();
     fase1 = new Fase(player1, &window);
