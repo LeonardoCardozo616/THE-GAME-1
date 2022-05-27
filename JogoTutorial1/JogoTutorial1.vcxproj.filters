@@ -193,6 +193,8 @@
     </ClInclude>
     <ClInclude Include="Gerenciador_Input.h">
       <Filter>Arquivos de Cabeçalho\Gerenciadores</Filter>
+    <ClInclude Include="CoordenadaTL.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
