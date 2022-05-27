@@ -179,5 +179,8 @@
     <ClInclude Include="Gerenciador_Grafico.h">
       <Filter>Arquivos de Cabeçalho\Gerenciadores</Filter>
     </ClInclude>
+    <ClInclude Include="CoordenadaTL.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

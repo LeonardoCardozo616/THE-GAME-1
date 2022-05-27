@@ -1,8 +1,11 @@
 #pragma once
+#include "CoordenadaTL.h"
+
 class Ente
 {
 protected:
-	int id;
+	CoordF posicao;
+	CoordF tamanho;
 public:
 	Ente();
 	~Ente();
