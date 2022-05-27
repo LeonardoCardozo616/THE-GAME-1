@@ -1,13 +1,14 @@
 #include "Jogo.h"
 
 Jogo::Jogo():
-window(sf::VideoMode(400, 400), "Jogo!"),
-GerenciadorGrafico()
+GerenciadorGrafico(),
+GerenciadorEventos(&GerenciadorGrafico),
+player1(new Jogador)
 {
-    player1 = new Jogador();
-    fase1 = new Fase(player1, &window);
-    player1->setWindow(&window);
-    LES = fase1->getListaEntidades();
+    //player1 = new Jogador();
+    //fase1 = new Fase(player1, &window);
+    //player1->setWindow(&window);
+    //LES = fase1->getListaEntidades();
     
 	executar();
 }
@@ -18,6 +19,16 @@ Jogo::~Jogo()
 
 void Jogo::executar()
 {
+    while (GerenciadorGrafico.isWindowOpen())
+    {
+        GerenciadorEventos.pollEvents();
+        player1->move();
+        GerenciadorGrafico.clearWindow();
+        GerenciadorGrafico.render(player1->getBody());
+        GerenciadorGrafico.display();
+    }
+
+    /*
     while (window.isOpen())
     {
         sf::Event event;
@@ -36,4 +47,5 @@ void Jogo::executar()
 
         window.display();
     }
+    */
 }

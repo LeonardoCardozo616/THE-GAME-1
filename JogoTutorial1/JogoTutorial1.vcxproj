@@ -150,7 +150,9 @@
     <ClCompile Include="Fase.cpp" />
     <ClCompile Include="Fase1.cpp" />
     <ClCompile Include="Fase2.cpp" />
+    <ClCompile Include="Gerenciador_Eventos.cpp" />
     <ClCompile Include="Gerenciador_Grafico.cpp" />
+    <ClCompile Include="Gerenciador_Input.cpp" />
     <ClCompile Include="Inimigo.cpp" />
     <ClCompile Include="Inimigo_A.cpp" />
     <ClCompile Include="Inimigo_B.cpp" />
@@ -175,7 +177,9 @@
     <ClInclude Include="Fase.h" />
     <ClInclude Include="Fase1.h" />
     <ClInclude Include="Fase2.h" />
+    <ClInclude Include="Gerenciador_Eventos.h" />
     <ClInclude Include="Gerenciador_Grafico.h" />
+    <ClInclude Include="Gerenciador_Input.h" />
     <ClInclude Include="Inimigo.h" />
     <ClInclude Include="Inimigo_A.h" />
     <ClInclude Include="Inimigo_B.h" />

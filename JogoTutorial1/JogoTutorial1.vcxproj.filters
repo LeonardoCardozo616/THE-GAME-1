@@ -46,6 +46,9 @@
     <Filter Include="Arquivos de Cabeçalho\Gerenciadores">
       <UniqueIdentifier>{8348b00d-4305-4325-8c58-2b1f10298bc2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arquivos de Origem\Gerenciadores">
+      <UniqueIdentifier>{a26c24e3-f26a-4e07-b0ab-db600871d82d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -108,8 +111,14 @@
     <ClCompile Include="Entidade.cpp">
       <Filter>Arquivos de Origem\Entidades</Filter>
     </ClCompile>
+    <ClCompile Include="Gerenciador_Eventos.cpp">
+      <Filter>Arquivos de Origem\Gerenciadores</Filter>
+    </ClCompile>
     <ClCompile Include="Gerenciador_Grafico.cpp">
-      <Filter>Arquivos de Origem</Filter>
+      <Filter>Arquivos de Origem\Gerenciadores</Filter>
+    </ClCompile>
+    <ClCompile Include="Gerenciador_Input.cpp">
+      <Filter>Arquivos de Origem\Gerenciadores</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +188,11 @@
     <ClInclude Include="Gerenciador_Grafico.h">
       <Filter>Arquivos de Cabeçalho\Gerenciadores</Filter>
     </ClInclude>
+    <ClInclude Include="Gerenciador_Eventos.h">
+      <Filter>Arquivos de Cabeçalho\Gerenciadores</Filter>
+    </ClInclude>
+    <ClInclude Include="Gerenciador_Input.h">
+      <Filter>Arquivos de Cabeçalho\Gerenciadores</Filter>
     <ClInclude Include="CoordenadaTL.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
