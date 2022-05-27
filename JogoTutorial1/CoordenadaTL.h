@@ -5,7 +5,7 @@ using namespace std;
 template <typename TL>
 class Coordenada
 {
-private:
+private: //Nessa versão x e y são privados, por isso use getX() e getY() 
 	TL x;
 	TL y;
 public:
@@ -32,6 +32,8 @@ public:
 
 typedef Coordenada<float> CoordF;
 typedef Coordenada<double> CoordD;
+typedef Coordenada<int> CoordI;
+typedef Coordenada<unsigned int> CoordU;
 
 template<typename TL>
 inline Coordenada<TL>::Coordenada(TL x, TL y) :
