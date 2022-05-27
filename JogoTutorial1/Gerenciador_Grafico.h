@@ -1,11 +1,12 @@
 #pragma once
 
 #include<SFML/Graphics.hpp>
+#include <map>
 
 class Gerenciador_Grafico
 {
 private:
-	sf::RenderWindow* window;
+	sf::RenderWindow* Window;
 	//sf::View view;
 
 public:

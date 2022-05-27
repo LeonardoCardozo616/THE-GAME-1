@@ -1,5 +1,4 @@
 #include"Jogo.h"
-#include<stdio.h>
 
 int main()
 {

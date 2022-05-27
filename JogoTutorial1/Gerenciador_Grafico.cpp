@@ -4,45 +4,45 @@
 #define ALTURA 720
 
 Gerenciador_Grafico::Gerenciador_Grafico() :
-window(new sf::RenderWindow(sf::VideoMode(LARGURA, ALTURA), "Jogo", sf::Style::Titlebar | sf::Style::Close))
+Window(new sf::RenderWindow(sf::VideoMode(LARGURA, ALTURA), "Jogo", sf::Style::Titlebar | sf::Style::Close))
 {
 
 }
 
 Gerenciador_Grafico::~Gerenciador_Grafico()
 {
-	delete window;
+	delete Window;
 }
 
 sf::RenderWindow* Gerenciador_Grafico::getWindow() const
 {
-	return window;
+	return Window;
 }
 
 bool Gerenciador_Grafico::isWindowOpen()
 {
-	return window->isOpen();
+	return Window->isOpen();
 }
 
 void Gerenciador_Grafico::clearWindow()
 {
-	window->clear();
+	Window->clear();
 }
 
 void Gerenciador_Grafico::render(sf::RectangleShape* body)
 {
-	window->draw(*body);
+	Window->draw(*body);
 }
 
 void Gerenciador_Grafico::display()
 {
 	if (isWindowOpen())
 	{
-		window->display();
+		Window->display();
 	}
 }
 
 void Gerenciador_Grafico::closeWindow()
 {
-	window->close();
+	Window->close();
 }
