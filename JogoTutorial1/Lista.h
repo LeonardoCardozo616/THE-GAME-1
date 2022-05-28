@@ -6,6 +6,7 @@ private:
 	Elemento<TL>* pPrimeiro;
 	Elemento<TL>* pUltimo;
 	int len;
+
 public:
 	Lista();
 	~Lista();

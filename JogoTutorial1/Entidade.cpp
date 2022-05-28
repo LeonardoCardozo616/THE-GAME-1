@@ -1,7 +1,9 @@
 #include "Entidade.h"
 
-Entidade::Entidade(CoordF posicao, CoordF tamanho, int id):
-Ente(id),
+
+Entidade::Entidade(CoordF posicao, CoordF tamanho, ID id):
+Ente(posicao, tamanho),
+id(id),
 body(sf::Vector2f(100.f, 100.f))
 {
 	this->posicao = posicao;
@@ -12,24 +14,9 @@ Entidade::~Entidade()
 {
 }
 
-void Entidade::setPosicao(CoordF pos)
+ID Entidade::getID() const
 {
-	this->posicao = pos;
-}
-
-CoordF Entidade::getPosicao() const
-{
-	return posicao;
-}
-
-void Entidade::setTamanho(CoordF tam)
-{
-	this->tamanho = tam;
-}
-
-CoordF Entidade::getTamanho() const
-{
-	return tamanho;
+	return id;
 }
 
 sf::RectangleShape* Entidade::getBody()
