@@ -30,11 +30,6 @@ public:
 	//virtual void inicializa() = 0;
 	//virtual void colisao(Entidade outraEntidade, CoordF intereccao) = 0;
 
-	void setPosicao(CoordF pos);
-	CoordF getPosicao() const;
-	void setTamanho(CoordF tam);
-	CoordF getTamanho() const;
-
 	sf::RectangleShape* getBody();
 	//void setWindow(sf::RenderWindow* w) { this->window = w; }
 	//void draw() { window->draw(body); }

@@ -6,6 +6,7 @@ class Ente
 protected:
 	CoordF posicao;
 	CoordF tamanho;
+
 public:
 	Ente(CoordF posicao = CoordF(0.0f, 0.0f), CoordF tamanho = CoordF(0.0f, 0.0f));
 	~Ente();
