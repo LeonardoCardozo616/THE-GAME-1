@@ -1,8 +1,8 @@
 #include "Jogo.h"
 
 Jogo::Jogo():
-GerenciadorGrafico(),
-GerenciadorEventos(&GerenciadorGrafico),
+GerenciadorGrafico(new Gerenciador_Grafico),
+GerenciadorEventos(new Gerenciador_Eventos(GerenciadorGrafico)),
 player1(new Jogador)
 {
     //player1 = new Jogador();
@@ -19,13 +19,13 @@ Jogo::~Jogo()
 
 void Jogo::executar()
 {
-    while (GerenciadorGrafico.isWindowOpen())
+    while (GerenciadorGrafico->isWindowOpen())
     {
-        GerenciadorEventos.pollEvents();
+        GerenciadorEventos->pollEvents();
         player1->move();
-        GerenciadorGrafico.clearWindow();
-        GerenciadorGrafico.render(player1->getBody());
-        GerenciadorGrafico.display();
+        GerenciadorGrafico->clearWindow();
+        GerenciadorGrafico->render(player1->getBody());
+        GerenciadorGrafico->display();
     }
 
     /*

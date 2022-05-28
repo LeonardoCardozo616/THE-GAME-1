@@ -4,10 +4,11 @@
 class Gerenciador_Colisoes
 {
 private:
-	ListaEntidades* LE;
+	ListaEntidades* EntidadesMoveis;
+	ListaEntidades* EntidadesFixas;
 
 public:
-	Gerenciador_Colisoes();
+	Gerenciador_Colisoes(ListaEntidades* ListaMoveis = NULL, ListaEntidades* ListaFixas = NULL);
 	~Gerenciador_Colisoes();
 
 	void checkColisoes();

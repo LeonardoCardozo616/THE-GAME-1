@@ -8,11 +8,11 @@
 class Jogo
 {
 private:
-	Gerenciador_Grafico GerenciadorGrafico;
-	Gerenciador_Eventos GerenciadorEventos;
+	Gerenciador_Grafico* GerenciadorGrafico;
+	Gerenciador_Eventos* GerenciadorEventos;
+
 	Jogador *player1;
- 
-	//ListaEntidades* LES;
+	ListaEntidades* LES;
 	//Fase *fase1;
 
 public:

@@ -4,7 +4,6 @@
 class Ente
 {
 protected:
-	int id;
 
 public:
 	Ente(int id = -1);
