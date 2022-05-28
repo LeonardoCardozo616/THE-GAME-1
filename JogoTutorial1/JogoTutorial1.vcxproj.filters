@@ -4,46 +4,7 @@
     <ClCompile Include="Ente.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="Entidade.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Fase.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Fase1.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Fase2.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Gerenciador_Eventos.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Gerenciador_Grafico.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Gerenciador_Input.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Inimigo.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Inimigo_A.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Inimigo_B.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Inimigo_C.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Jogador.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="Jogo.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="ListaEntidades.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
@@ -52,106 +13,145 @@
     <ClCompile Include="Menu.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="Obst_A.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Obst_B.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Obst_C.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Obstaculo.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Personagem.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="Projetil.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="Fase1.cpp">
+      <Filter>source\Fases</Filter>
+    </ClCompile>
+    <ClCompile Include="Fase2.cpp">
+      <Filter>source\Fases</Filter>
+    </ClCompile>
+    <ClCompile Include="Entidade.cpp">
+      <Filter>source\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Jogador.cpp">
+      <Filter>source\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Personagem.cpp">
+      <Filter>source\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Fase.cpp">
+      <Filter>source\Fases</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaEntidades.cpp">
+      <Filter>source\Listas</Filter>
+    </ClCompile>
     <ClCompile Include="Gerenciador_Colisoes.cpp">
-      <Filter>source</Filter>
+      <Filter>source\Gerenciadores</Filter>
+    </ClCompile>
+    <ClCompile Include="Gerenciador_Eventos.cpp">
+      <Filter>source\Gerenciadores</Filter>
+    </ClCompile>
+    <ClCompile Include="Gerenciador_Input.cpp">
+      <Filter>source\Gerenciadores</Filter>
+    </ClCompile>
+    <ClCompile Include="Gerenciador_Grafico.cpp">
+      <Filter>source\Gerenciadores</Filter>
+    </ClCompile>
+    <ClCompile Include="Inimigo.cpp">
+      <Filter>source\Entidades\Inimigo</Filter>
+    </ClCompile>
+    <ClCompile Include="Inimigo_A.cpp">
+      <Filter>source\Entidades\Inimigo</Filter>
+    </ClCompile>
+    <ClCompile Include="Inimigo_B.cpp">
+      <Filter>source\Entidades\Inimigo</Filter>
+    </ClCompile>
+    <ClCompile Include="Inimigo_C.cpp">
+      <Filter>source\Entidades\Inimigo</Filter>
+    </ClCompile>
+    <ClCompile Include="Obst_A.cpp">
+      <Filter>source\Entidades\Obstáculo</Filter>
+    </ClCompile>
+    <ClCompile Include="Obst_C.cpp">
+      <Filter>source\Entidades\Obstáculo</Filter>
+    </ClCompile>
+    <ClCompile Include="Obst_B.cpp">
+      <Filter>source\Entidades\Obstáculo</Filter>
+    </ClCompile>
+    <ClCompile Include="Obstaculo.cpp">
+      <Filter>source\Entidades\Obstáculo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoordenadaTL.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Elemento.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Entidade.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Ente.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Fase.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Fase1.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Fase2.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Gerenciador_Eventos.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Gerenciador_Grafico.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Gerenciador_Input.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Inimigo.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Inimigo_A.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Inimigo_B.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Inimigo_C.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Jogador.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Jogo.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Lista.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="ListaEntidades.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Menu.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Obst_A.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Obst_B.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Obst_C.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Obstaculo.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Personagem.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Projetil.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="ListaEntidades.h">
+      <Filter>include\Listas</Filter>
+    </ClInclude>
+    <ClInclude Include="Lista.h">
+      <Filter>include\Listas</Filter>
+    </ClInclude>
     <ClInclude Include="Gerenciador_Colisoes.h">
-      <Filter>include</Filter>
+      <Filter>include\Gerenciadores</Filter>
+    </ClInclude>
+    <ClInclude Include="Gerenciador_Eventos.h">
+      <Filter>include\Gerenciadores</Filter>
+    </ClInclude>
+    <ClInclude Include="Gerenciador_Grafico.h">
+      <Filter>include\Gerenciadores</Filter>
+    </ClInclude>
+    <ClInclude Include="Gerenciador_Input.h">
+      <Filter>include\Gerenciadores</Filter>
+    </ClInclude>
+    <ClInclude Include="Fase.h">
+      <Filter>include\Fases</Filter>
+    </ClInclude>
+    <ClInclude Include="Fase1.h">
+      <Filter>include\Fases</Filter>
+    </ClInclude>
+    <ClInclude Include="Fase2.h">
+      <Filter>include\Fases</Filter>
+    </ClInclude>
+    <ClInclude Include="Entidade.h">
+      <Filter>include\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Jogador.h">
+      <Filter>include\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Personagem.h">
+      <Filter>include\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Elemento.h">
+      <Filter>include\Listas</Filter>
+    </ClInclude>
+    <ClInclude Include="Inimigo.h">
+      <Filter>include\Entidades\Inimigo</Filter>
+    </ClInclude>
+    <ClInclude Include="Inimigo_A.h">
+      <Filter>include\Entidades\Inimigo</Filter>
+    </ClInclude>
+    <ClInclude Include="Inimigo_B.h">
+      <Filter>include\Entidades\Inimigo</Filter>
+    </ClInclude>
+    <ClInclude Include="Inimigo_C.h">
+      <Filter>include\Entidades\Inimigo</Filter>
+    </ClInclude>
+    <ClInclude Include="Obst_C.h">
+      <Filter>include\Entidades\Obstáculo</Filter>
+    </ClInclude>
+    <ClInclude Include="Obst_B.h">
+      <Filter>include\Entidades\Obstáculo</Filter>
+    </ClInclude>
+    <ClInclude Include="Obst_A.h">
+      <Filter>include\Entidades\Obstáculo</Filter>
+    </ClInclude>
+    <ClInclude Include="Obstaculo.h">
+      <Filter>include\Entidades\Obstáculo</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +160,42 @@
     </Filter>
     <Filter Include="source">
       <UniqueIdentifier>{e69b79c9-ed46-478e-9d47-ac5d8f25f17e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Listas">
+      <UniqueIdentifier>{3c918b31-c16e-43b9-89d5-6b1d0bf0c334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Gerenciadores">
+      <UniqueIdentifier>{ab7ced25-ef49-4249-9367-0a4c1eb67240}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Gerenciadores">
+      <UniqueIdentifier>{05649595-ef2f-41d4-b7d1-71249b9546ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Fases">
+      <UniqueIdentifier>{383e33ae-5e37-4d5e-9c56-a93f71f836da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Fases">
+      <UniqueIdentifier>{c263fcd5-c316-4e46-a8dd-cd3a92f358ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Entidades">
+      <UniqueIdentifier>{118c3e7a-84d8-4dce-86d6-08ccdae4227d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Entidades">
+      <UniqueIdentifier>{4301b993-ed89-4b97-92fc-a3ef18031bb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Listas">
+      <UniqueIdentifier>{5dcdd969-6640-4c25-aff2-dfa4fc731198}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Entidades\Inimigo">
+      <UniqueIdentifier>{811bb6d4-4571-4838-bd4a-18a96949a912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Entidades\Obstáculo">
+      <UniqueIdentifier>{cffeccc2-75b8-4c26-a4ea-c1cec72c7fd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Entidades\Inimigo">
+      <UniqueIdentifier>{346a2621-be87-4a5a-8c31-7729edfc17eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Entidades\Obstáculo">
+      <UniqueIdentifier>{63bc8403-1282-4ff6-8e66-1dcc79732aaf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
