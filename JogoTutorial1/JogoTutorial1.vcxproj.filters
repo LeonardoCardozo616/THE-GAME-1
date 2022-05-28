@@ -70,6 +70,9 @@
     <ClCompile Include="Projetil.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="Gerenciador_Colisoes.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoordenadaTL.h">
@@ -145,6 +148,9 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Projetil.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Gerenciador_Colisoes.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

@@ -5,5 +5,7 @@ class ListaEntidades
 {
 public:
 	Lista<Entidade> LEs;
+
+	int getLength();
 };
 

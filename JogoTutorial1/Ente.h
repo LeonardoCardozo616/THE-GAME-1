@@ -4,19 +4,15 @@
 class Ente
 {
 protected:
-	CoordF posicao;
-	CoordF tamanho;
+
 public:
-	Ente(CoordF posicao = CoordF(0.0f, 0.0f) ,	CoordF tamanho = CoordF(0.0f, 0.0f));
+	Ente(int id = -1);
 	~Ente();
-	void setPosicao(CoordF pos);
-	CoordF getPosicao() const;
-	void setTamanho(CoordF tam);
-	CoordF getTamanho() const;
+
+	void setId(int id);
+	int getId() const;
 	//virtual void render() = 0;
 	//virtual void update(const float dt) = 0;
 	//virtual void inicializa() = 0;
-	void executar() {};
-	void imprimir();
 };
 

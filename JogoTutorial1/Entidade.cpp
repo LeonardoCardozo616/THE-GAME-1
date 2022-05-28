@@ -1,10 +1,13 @@
 #include "Entidade.h"
 
+
 Entidade::Entidade(CoordF posicao, CoordF tamanho, ID id):
-	Ente(posicao, tamanho),
-	id(id),
-	body(sf::Vector2f(100.f, 100.f))
+Ente(posicao, tamanho),
+id(id),
+body(sf::Vector2f(100.f, 100.f))
 {
+	this->posicao = posicao;
+	this->tamanho = tamanho;
 }
 
 Entidade::~Entidade()

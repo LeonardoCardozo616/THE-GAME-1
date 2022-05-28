@@ -8,6 +8,7 @@ class Coordenada
 private: //Nessa versão x e y são privados, por isso use getX() e getY() 
 	TL x;
 	TL y;
+
 public:
 	Coordenada(TL x, TL y);
 	Coordenada();
