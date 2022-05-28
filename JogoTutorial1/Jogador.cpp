@@ -1,6 +1,7 @@
 #include "Jogador.h"
 
-Jogador::Jogador()
+Jogador::Jogador(int num_vidas, CoordF posicao, CoordF tamanho, int id):
+Personagem(num_vidas, posicao, tamanho, id)
 {
     body.setFillColor(sf::Color::Yellow);
 }
