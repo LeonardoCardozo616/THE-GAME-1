@@ -1,7 +1,8 @@
 #include "Ente.h"
 
-Ente::Ente(int id):
-id(id)
+Ente::Ente(CoordF posicao, CoordF tamanho) :
+	posicao(posicao),
+	tamanho(tamanho)
 {
 }
 
@@ -9,12 +10,26 @@ Ente::~Ente()
 {
 }
 
-void Ente::setId(int id)
+void Ente::setPosicao(CoordF pos)
 {
-	this->id = id;
+	this->posicao = pos;
 }
 
-int Ente::getId() const
+CoordF Ente::getPosicao() const
 {
-	return id;
+	return posicao;
+}
+
+void Ente::setTamanho(CoordF tam)
+{
+	this->tamanho = tam;
+}
+
+CoordF Ente::getTamanho() const
+{
+	return tamanho;
+}
+
+void Ente::imprimir()
+{
 }
