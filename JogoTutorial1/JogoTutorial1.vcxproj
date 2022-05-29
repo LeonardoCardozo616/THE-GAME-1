@@ -145,6 +145,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimacaoEstatica.cpp" />
+    <ClCompile Include="AnimacaoMovimento.cpp" />
     <ClCompile Include="Ente.cpp" />
     <ClCompile Include="Entidade.cpp" />
     <ClCompile Include="Fase.cpp" />
@@ -171,6 +173,8 @@
     <ClCompile Include="Projetil.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimacaoEstatica.h" />
+    <ClInclude Include="AnimacaoMovimento.h" />
     <ClInclude Include="CoordenadaTL.h" />
     <ClInclude Include="Elemento.h" />
     <ClInclude Include="Ente.h" />
