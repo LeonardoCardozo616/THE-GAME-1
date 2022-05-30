@@ -79,6 +79,7 @@
     <ClCompile Include="AnimacaoMovimento.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="EntidadeEstatica.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoordenadaTL.h">
@@ -165,6 +166,7 @@
     <ClInclude Include="AnimacaoMovimento.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="EntidadeEstatica.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">

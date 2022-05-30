@@ -15,7 +15,7 @@ private:
 	static Gerenciador_Grafico* instancia;
 
 	// Padrão de projeto Singleton
-	Gerenciador_Grafico();
+	//Gerenciador_Grafico();
 
 public:
 	Gerenciador_Grafico();
