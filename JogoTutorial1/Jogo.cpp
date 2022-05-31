@@ -5,7 +5,7 @@ GerenciadorGrafico(new Gerenciador_Grafico),
 LES(new ListaEntidades()),
 GerenciadorEventos(new Gerenciador_Eventos(GerenciadorGrafico)),
 player1(new Jogador(0, CoordF((0.f), (0.f)), CoordF((100.f), (100.f)), CoordF((100.f), (100.f)))),
-parede(new Obst_A(CoordF(250.f, 250.f), CoordF((100.f), (100.f))))
+parede(new Plataforma(CoordF(250.f, 250.f)))
 {
     LES->adicionarEntidade(parede);
     LES->adicionarEntidade(player1);

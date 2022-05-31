@@ -15,7 +15,7 @@ private:
 	Gerenciador_Eventos* GerenciadorEventos;
 	Gerenciador_Colisoes* GerenciadorColisoes;
 
-	Obst_A *parede;
+	Plataforma *parede;
 	Jogador *player1;
 	ListaEntidades* LES;
 

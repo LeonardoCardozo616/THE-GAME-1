@@ -1,14 +1,28 @@
 #include "Obst_A.h"
 
-Obst_A::Obst_A(CoordF pos, CoordF tam, ID ind) :
-Obstaculo(pos, tam, ind)
+#define PLATAFORMA_PATH "Sonic_the_Hedgehog_Plataform.png"
+
+Plataforma::Plataforma(CoordF posicao) :
+	EntidadeEstatica(posicao, CoordF(PLATAFORMA_LARGURA, PLATAFORMA_ALTURA), ID::obst_A)
+{
+	inicializa();
+}
+
+Plataforma::~Plataforma()
 {
 }
 
-Obst_A::~Obst_A()
+void Plataforma::update(const float dt)
 {
+	sprite.update(posicao);
 }
 
-void Obst_A::colisao(Entidade* outraEntidade, CoordF interseccao)
+void Plataforma::inicializa()
 {
+	sprite.inicializa(PLATAFORMA_PATH, posicao, tamanho);
+}
+
+void Plataforma::colisao(Entidade* outraEntidade, CoordF inteccao)
+{
+
 }

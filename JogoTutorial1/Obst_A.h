@@ -13,5 +13,7 @@ public:
 
     void update(const float dt);
     void inicializa();
+
+    /*Colisao que nao funciona muito bem*/
     void colisao(Entidade* outraEntidade, CoordF inteccao);
 };
