@@ -1,7 +1,5 @@
 #include "AnimacaoEstatica.h"
 
-Gerenciador_Grafico* AnimacaoEstatica::pGerenGrafico = Gerenciador_Grafico::getInstancia();
-
 AnimacaoEstatica::AnimacaoEstatica() :
 	body(),
 	textura(nullptr)

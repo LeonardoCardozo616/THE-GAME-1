@@ -12,19 +12,13 @@ private:
 	sf::RenderWindow* Window;
 	//sf::View view;
 	map<const char*, Texture*> mapaTextura;
-	static Gerenciador_Grafico* instancia;
-
-	// Padrão de projeto Singleton
-	//Gerenciador_Grafico();
-
+	
 public:
 	Gerenciador_Grafico();
 	~Gerenciador_Grafico();
-	static Gerenciador_Grafico* getInstancia();
 
 	sf::RenderWindow* getWindow() const;
 	bool isWindowOpen();
-
 	void clearWindow();
 	void render(sf::RectangleShape* body);
 	void display();

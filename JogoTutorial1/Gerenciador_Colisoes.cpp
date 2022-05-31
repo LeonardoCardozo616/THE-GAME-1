@@ -29,7 +29,7 @@ void Gerenciador_Colisoes::checkColisoes()
 	Entidade* pEntidade2;
 
 	CoordF distCentro;
-	CoordF interseccao;
+	CoordF somaTam;
 
 	int qtdEntidades = Entidades->getLength();
 
@@ -42,32 +42,27 @@ void Gerenciador_Colisoes::checkColisoes()
 
 	for (i = 0; i < qtdEntidades; i++)
 	{
-		j = i + 1;
-
-		pElEntidade2 = Entidades->getElemento(j);
-
-		while (j < qtdEntidades)
+		pElEntidade2 = Entidades->getElemento(0);
+		for (j = 0; j < qtdEntidades; j++)
 		{
-			pEntidade1 = pElEntidade1->getItem();
-			pEntidade2 = pElEntidade2->getItem();
-
-			distCentro = pEntidade2->getPosicao() - pEntidade1->getPosicao();
-
-			interseccao -= (pEntidade1->getTamanho() / 2.0f + pEntidade2->getTamanho() / 2.0f);
-			interseccao.atualizarX(fabs(distCentro.getX()));
-			interseccao.atualizarY(fabs(distCentro.getY()));
-
-			if (interseccao.getX() < 0.0f && interseccao.getY() < 0.0f)
+			if (i != j)
 			{
-				pEntidade2->colisao(pEntidade1, interseccao);
-				std::cout << "colisão" << std::endl;
+				pEntidade1 = pElEntidade1->getItem();
+				pEntidade2 = (*Entidades)[j];
+
+				distCentro = pEntidade1->getPosicao() - pEntidade2->getPosicao();
+				distCentro.calculaAbs();
+
+				somaTam = pEntidade1->getTamanho() / 2.f + pEntidade2->getTamanho() / 2.f;
+
+				if (distCentro.getX() < somaTam.getX() && distCentro.getY() < somaTam.getY())
+				{
+					pEntidade2->colisao(pEntidade1, somaTam - distCentro);
+					//std::cout << "colisão" << std::endl;
+				}
 			}
-
 			pElEntidade2 = pElEntidade2->getPprox();
-
-			j++;
 		}
-
 		pElEntidade1 = pElEntidade1->getPprox();
 	}
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 template <typename TL>
@@ -25,6 +26,8 @@ public:
 
 	void atualizarX(TL x);
 	void atualizarY(TL y);
+
+	void calculaAbs();
 
 	void operator=(Coordenada<TL> outro);
 	void operator+=(Coordenada<TL> outro);
@@ -85,6 +88,13 @@ template<typename TL>
 inline void Coordenada<TL>::atualizarY(TL y)
 {
 	this->y += y;
+}
+
+template<typename TL>
+inline void Coordenada<TL>::calculaAbs()
+{
+	x = fabs(x);
+	y = fabs(y);
 }
 
 template<typename TL>

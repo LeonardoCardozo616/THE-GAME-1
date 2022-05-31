@@ -5,8 +5,6 @@
 #define LARGURA 1280
 #define ALTURA 720
 
-Gerenciador_Grafico* Gerenciador_Grafico::instancia = nullptr;
-
 
 Gerenciador_Grafico::Gerenciador_Grafico() :
 Window(new sf::RenderWindow(sf::VideoMode(LARGURA, ALTURA), "Jogo", sf::Style::Titlebar | sf::Style::Close)),
@@ -22,16 +20,6 @@ Gerenciador_Grafico::~Gerenciador_Grafico()
 	}
 	
 	delete Window;
-}
-
-//Instancia inicia a construtora de gerenciamento gráfico
-Gerenciador_Grafico* Gerenciador_Grafico::getInstancia()
-{
-	if (instancia == nullptr) {
-		instancia = new Gerenciador_Grafico();
-	}
-
-	return instancia;
 }
 
 sf::RenderWindow* Gerenciador_Grafico::getWindow() const
