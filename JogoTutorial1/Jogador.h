@@ -7,8 +7,10 @@ class Jogador : public Personagem
 private:
     // Nada ainda
 public:
-    Jogador(int num_vidas = 0, CoordF posicao = CoordF(0.0f, 0.0f), CoordF tamanho = CoordF(0.0f, 0.0f), ID id = vazio);
+    Jogador(int vidas = 0, CoordF vel = CoordF(0.0f, 0.0f), CoordF pos = CoordF(0.0f, 0.0f), CoordF tam = CoordF(0.0f, 0.0f), ID ind = vazio);
     ~Jogador();
+
+    void colisao(Entidade* outraEntidade, CoordF interseccao);
     void move();
 };
 

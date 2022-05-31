@@ -1,8 +1,8 @@
 #include "Ente.h"
 
-Ente::Ente(CoordF posicao, CoordF tamanho) :
-	posicao(posicao),
-	tamanho(tamanho)
+Ente::Ente(CoordF pos, CoordF tam) :
+tamanho(tam),
+posicao(pos)
 {
 }
 
@@ -28,6 +28,16 @@ void Ente::setTamanho(CoordF tam)
 CoordF Ente::getTamanho() const
 {
 	return tamanho;
+}
+
+float Ente::getLargura()
+{
+	return tamanho.getX();
+}
+
+float Ente::getAltura()
+{
+	return tamanho.getY();
 }
 
 void Ente::imprimir()

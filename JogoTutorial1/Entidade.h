@@ -3,7 +3,7 @@
 #include"Ente.h"
 #include<math.h>
 
-enum  ID {
+enum ID {
 	vazio = 0,
 	jogador,
 	obst_A,
@@ -22,13 +22,13 @@ protected:
 	//sf::RenderWindow *window;
 
 public:
-	Entidade(CoordF posicao = CoordF(0.0f, 0.0f), CoordF tamanho = CoordF(0.0f, 0.0f), ID id = vazio); 
+	Entidade(CoordF pos = CoordF(0.0f, 0.0f), CoordF tam = CoordF(0.0f, 0.0f), ID ind = vazio);
 	~Entidade();
 	ID getID() const;
 	//virtual void render() = 0;
 	//virtual void update(const float dt) = 0;
 	//virtual void inicializa() = 0;
-	//virtual void colisao(Entidade outraEntidade, CoordF intereccao) = 0;
+	virtual void colisao(Entidade* outraEntidade, CoordF interseccao) = 0;
 
 	sf::RectangleShape* getBody();
 	//void setWindow(sf::RenderWindow* w) { this->window = w; }

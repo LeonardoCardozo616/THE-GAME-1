@@ -1,20 +1,34 @@
 #include "Jogo.h"
 
-Jogo::Jogo():
+Jogo::Jogo() :
 GerenciadorGrafico(new Gerenciador_Grafico),
+LES(new ListaEntidades()),
 GerenciadorEventos(new Gerenciador_Eventos(GerenciadorGrafico)),
-player1(new Jogador)
+player1(new Jogador(0, CoordF((0.f), (0.f)), CoordF((100.f), (100.f)), CoordF((100.f), (100.f)))),
+parede(new Obst_A(CoordF(250.f, 250.f), CoordF((100.f), (100.f))))
 {
+    LES->adicionarEntidade(parede);
+    LES->adicionarEntidade(player1);
+
     //player1 = new Jogador();
     //fase1 = new Fase(player1, &window);
     //player1->setWindow(&window);
     //LES = fase1->getListaEntidades();
-    
+
+    GerenciadorColisoes = new Gerenciador_Colisoes(LES);
+
 	executar();
 }
 
 Jogo::~Jogo()
 {
+    delete GerenciadorGrafico;
+    delete GerenciadorEventos;
+
+    delete LES;
+    
+    delete player1;
+    delete parede;
 }
 
 void Jogo::executar()
@@ -24,28 +38,9 @@ void Jogo::executar()
         GerenciadorEventos->pollEvents();
         player1->move();
         GerenciadorGrafico->clearWindow();
+        GerenciadorColisoes->checkColisoes();
         GerenciadorGrafico->render(player1->getBody());
+        GerenciadorGrafico->render(parede->getBody());
         GerenciadorGrafico->display();
     }
-
-    /*
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-        player1->move();
-        window.clear();
-        
-        for (int i = 0; i < LES->LEs.getLen(); i++) {
-            Entidade* temp = LES->LEs.getItem(i);
-            temp->draw();
-        }
-
-        window.display();
-    }
-    */
 }

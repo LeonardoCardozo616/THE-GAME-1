@@ -1,5 +1,6 @@
 #pragma once
 #include "Elemento.h"
+
 template <class TL> class Lista
 {
 private:
@@ -11,9 +12,13 @@ public:
 	Lista();
 	~Lista();
 
-	int getLen() { return len; }
+	int getLen() 
+	{
+		return this->len; 
+	}
 
-	TL* getItem(int posicao) {
+	TL* getItem(int posicao) 
+	{
 		Elemento<TL>* temp = pPrimeiro;
 		if (posicao == 0)
 			return temp->getItem();
@@ -22,7 +27,20 @@ public:
 		}
 		return temp->getItem();
 	}
-	void push(TL* item) {
+
+	Elemento<TL>* getElemento(int posicao)
+	{
+		Elemento<TL>* temp = pPrimeiro;
+		if (posicao == 0)
+			return temp;
+		for (int i = 0; i < posicao; i++) {
+			temp = temp->getPprox();
+		}
+		return temp;
+	}
+
+	void push(TL* item) 
+	{
 		if (pPrimeiro == nullptr) {
 			pPrimeiro = new Elemento<TL>;
 			pPrimeiro->setItem(item);
@@ -36,7 +54,9 @@ public:
 		}
 		len++;
 	}
-	void pop(TL* item) {
+
+	void pop(TL* item)
+	{
 		Elemento<TL> *temp = pPrimeiro;
 		Elemento<TL> *tempAnt = nullptr;
 		
@@ -57,11 +77,28 @@ public:
 		delete temp;
 		len--;
 	}
+
+	void esvaziar()
+	{
+		Elemento<TL>* tmp = pPrimeiro;
+		int i = 0;
+
+		while (tmp != nullptr && i < len)
+		{
+			// delete pPrimeiro->getItem(); ----------------------atention please
+			pPrimeiro = tmp->getPprox();
+			delete tmp;
+			tmp = pPrimeiro;
+		}
+
+		pUltimo = nullptr;
+		len = 0;
+	}
 	//void pop&delete(TL* item);
 };
 
 template<class TL>
-inline Lista<TL>::Lista()
+Lista<TL>::Lista()
 {
 	pPrimeiro = nullptr;
 	pUltimo = nullptr;
@@ -69,6 +106,7 @@ inline Lista<TL>::Lista()
 }
 
 template<class TL>
-inline Lista<TL>::~Lista()
+Lista<TL>::~Lista()
 {
+	esvaziar();
 }

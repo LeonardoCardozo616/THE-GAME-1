@@ -5,15 +5,19 @@
 #include"ListaEntidades.h"
 #include"Fase.h"
 #include "Gerenciador_Eventos.h"
+#include "Gerenciador_Colisoes.h"
+#include "Obst_A.h"
+
 class Jogo
 {
 private:
 	Gerenciador_Grafico* GerenciadorGrafico;
 	Gerenciador_Eventos* GerenciadorEventos;
+	Gerenciador_Colisoes* GerenciadorColisoes;
 
+	Obst_A *parede;
 	Jogador *player1;
 	ListaEntidades* LES;
-	//Fase *fase1;
 
 public:
 	Jogo();
