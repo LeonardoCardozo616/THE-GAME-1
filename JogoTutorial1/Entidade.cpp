@@ -13,11 +13,13 @@ Entidade::~Entidade()
 {
 }
 
+/*Pegar ID*/
 ID Entidade::getID() const
 {
 	return id;
 }
 
+/* Pegar o corpo (body)*/
 sf::RectangleShape* Entidade::getBody()
 {
 	return &body;
