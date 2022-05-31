@@ -1,9 +1,10 @@
 #include "Personagem.h"
 
-Personagem::Personagem(int num_vidas, CoordF posicao, CoordF tamanho, ID id):
-Entidade(posicao, tamanho, id)
+Personagem::Personagem(int vidas, CoordF vel, CoordF pos, CoordF tam, ID ind):
+Entidade(pos, tam, ind),
+num_vidas(vidas),
+velocidade(vel)
 {
-	this->num_vidas = num_vidas;
 }
 
 Personagem::~Personagem()

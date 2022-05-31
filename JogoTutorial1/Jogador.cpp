@@ -1,7 +1,10 @@
 #include "Jogador.h"
+//#include <iostream>
 
-Jogador::Jogador(int num_vidas, CoordF posicao, CoordF tamanho, ID id):
-Personagem(num_vidas, posicao, tamanho, id)
+#define velMov 0.1f
+
+Jogador::Jogador(int vidas, CoordF vel, CoordF pos, CoordF tam, ID ind):
+Personagem(vidas, vel, pos, tam, ind)
 {
     body.setFillColor(sf::Color::Yellow);
 }
@@ -10,12 +13,36 @@ Jogador::~Jogador()
 {
 }
 
+void Jogador::colisao(Entidade* outraEntidade, CoordF interseccao)
+{
+    std::cout << "x: " << interseccao.getX() << " y: " << interseccao.getY() << std::endl;
+}
+
 void Jogador::move()
 {
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        body.move(sf::Vector2f(0.1f, 0.f));
+    velocidade *= 0;
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+    {
+        velocidade.atualizarX(velMov);
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        body.move(sf::Vector2f(-0.1f, -0.f));
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    {
+        velocidade.atualizarX(-velMov);
     }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+    {
+        velocidade.atualizarY(velMov);
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+    {
+        velocidade.atualizarY(-velMov);
+    }
+
+    posicao.atualizarX(velocidade.getX());
+    posicao.atualizarY(velocidade.getY());
+
+    //std::cout << "x: " << posicao.getX() << " y: " << posicao.getY() << std::endl;
+
+    body.move(sf::Vector2f(velocidade.getX(), velocidade.getY()));
 }

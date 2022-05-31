@@ -10,6 +10,9 @@ private: //Nessa versão x e y são privados, por isso use getX() e getY()
 	TL y;
 
 public:
+	//TL y;
+	//TL x;
+
 	Coordenada(TL x, TL y);
 	Coordenada();
 	~Coordenada() { }
@@ -17,11 +20,17 @@ public:
 	TL getX() { return x; }
 	TL getY() { return y; }
 
+	void setX(TL x);
+	void setY(TL y);
+
+	void atualizarX(TL x);
+	void atualizarY(TL y);
+
 	void operator=(Coordenada<TL> outro);
 	void operator+=(Coordenada<TL> outro);
 	void operator-=(Coordenada<TL> outro);
-	void operator*=(double escalar);
-	void operator/=(double escalar);
+	void operator*=(float escalar);
+	void operator/=(float escalar);
 
 	Coordenada<TL> operator+(Coordenada<TL> outro);
 	Coordenada<TL> operator-(Coordenada<TL> outro);
@@ -50,6 +59,35 @@ inline Coordenada<TL>::Coordenada()
 	this->y = 0;
 }
 
+/* Função para atribuir um valor a coord x */
+template<typename TL>
+inline void Coordenada<TL>::setX(TL x)
+{
+	this->x = x;
+}
+
+/* Função para atribuir um valor a coord y */
+template<typename TL>
+inline void Coordenada<TL>::setY(TL y)
+{
+	this->y = y;
+}
+
+/* Função para atualizar x a partir de um valor já atribuido */
+template<typename TL>
+inline void Coordenada<TL>::atualizarX(TL x)
+{
+	this->x += x;
+}
+
+/* Função para atualizar y a partir de um valor já atribuido */
+template<typename TL>
+inline void Coordenada<TL>::atualizarY(TL y)
+{
+	this->y += y;
+}
+
+/* Operador para igualar x e y*/
 template<typename TL>
 void Coordenada<TL>::operator=(Coordenada<TL> outro)
 {
@@ -57,6 +95,7 @@ void Coordenada<TL>::operator=(Coordenada<TL> outro)
 	this->y = outro.getY();
 }
 
+/* Operador para somar x e y*/
 template<typename TL>
 void Coordenada<TL>::operator+=(Coordenada<TL> outro)
 {
@@ -64,6 +103,7 @@ void Coordenada<TL>::operator+=(Coordenada<TL> outro)
 	this->y += outro.getY();
 }
 
+/* Operador para subtrair x e y*/
 template<typename TL>
 void Coordenada<TL>::operator-=(Coordenada<TL> outro)
 {
@@ -71,15 +111,17 @@ void Coordenada<TL>::operator-=(Coordenada<TL> outro)
 	this->y -= outro.getY();
 }
 
+/* Operador para multiplicar x e y*/
 template<typename TL>
-void Coordenada<TL>::operator*=(double escalar)
+void Coordenada<TL>::operator*=(float escalar)
 {
 	this->x = this->y * escalar;
 	this->y = this->y * escalar;
 }
 
+/* Operador para dividir x e y*/
 template<typename TL>
-void Coordenada<TL>::operator/=(double escalar)
+void Coordenada<TL>::operator/=(float escalar)
 {
 	if (escalar != 0.0f) {
 		this->x /= escalar;
@@ -90,30 +132,35 @@ void Coordenada<TL>::operator/=(double escalar)
 	}
 }
 
+/* Operador para somar x e y*/
 template<typename TL>
 Coordenada<TL> Coordenada<TL>::operator+(Coordenada<TL> outro)
 {
 	return Coordenada<TL>(this->x + outro.getX(), this->y + outro.getY());
 }
 
+/* Operador para subtrair x e y*/
 template<typename TL>
 Coordenada<TL> Coordenada<TL>::operator-(Coordenada<TL> outro)
 {
 	return Coordenada<TL>(this->x - outro.getX(), this->y - outro.getY());
 }
 
+/* Operador para multiplicar x e y*/
 template<typename TL>
 Coordenada<TL> Coordenada<TL>::operator*(Coordenada<TL> outro)
 {
 	return Coordenada<TL>(this->x * outro.getX(), this->y * outro.getY());
 }
 
+/* Operador para muçtiplicar x e y atravez de um valor escalar*/
 template<typename TL>
 Coordenada<TL> Coordenada<TL>::operator*(double escalar)
 {
 	return Coordenada<TL>(this->x * escalar, this->y * escalar);
 }
 
+/* Operador para dividir x e y*/
 template<typename TL>
 Coordenada<TL> Coordenada<TL>::operator/(Coordenada<TL> outro)
 {
@@ -125,6 +172,7 @@ Coordenada<TL> Coordenada<TL>::operator/(Coordenada<TL> outro)
 	return Coordenada<TL>(this->x / outro.getX(), this->y / outro.getY());
 }
 
+/* Operador para dividir x e y atravez de um valor escalar*/
 template<typename TL>
 Coordenada<TL> Coordenada<TL>::operator/(double escalar)
 {
