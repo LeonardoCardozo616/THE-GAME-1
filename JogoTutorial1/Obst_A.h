@@ -1,13 +1,17 @@
 #pragma once
-#include "Obstaculo.h"
-class Obst_A : public Obstaculo
+#include "EntidadeEstatica.h"
+
+#define PLATAFORMA_ALTURA 192.f
+#define PLATAFORMA_LARGURA 192.f
+
+class Plataforma :
+    public EntidadeEstatica
 {
-private:
 public:
-    Obst_A(CoordF pos, CoordF tam, ID ind = vazio);
-    ~Obst_A();
+    Plataforma(CoordF posicao = CoordF(0.f, 0.f));
+    ~Plataforma();
 
-    // Paredes tem essa função mas não usam para nada
-    void colisao(Entidade* outraEntidade, CoordF interseccao);
+    void update(const float dt);
+    void inicializa();
+    void colisao(Entidade* outraEntidade, CoordF inteccao);
 };
-
