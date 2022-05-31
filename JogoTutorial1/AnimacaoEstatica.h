@@ -9,7 +9,7 @@ private:
 public:
 	AnimacaoEstatica();
 	~AnimacaoEstatica();
-	void inicializa(const char* path, CoordF posicao, CoordF tamanho, float escala);
+	void inicializa(const char* path, CoordF posicao, CoordF tamanho);
 	void update(CoordF posicao);
 	void render();
 };

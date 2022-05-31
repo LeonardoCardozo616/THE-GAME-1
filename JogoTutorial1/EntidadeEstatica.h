@@ -10,7 +10,7 @@ public:
 	~EntidadeEstatica();
 	void render();
 	virtual void update() {}
-	//virtual void inicializa() = 0;
+	virtual void inicializa() = 0;
 	virtual void colisao(Entidade* outraEntidade, CoordF interseccao) {}
 };
 
