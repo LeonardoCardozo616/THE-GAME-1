@@ -2,8 +2,8 @@
 
 #define PLATAFORMA_PATH "Sonic_the_Hedgehog_Plataform.png"
 
-Plataforma::Plataforma(CoordF posicao) :
-	EntidadeEstatica(posicao, CoordF(PLATAFORMA_LARGURA, PLATAFORMA_ALTURA), ID::obst_A)
+Plataforma::Plataforma(CoordF posicao):
+EntidadeEstatica(posicao, CoordF(PLATAFORMA_LARGURA, PLATAFORMA_ALTURA), ID::obst_A)
 {
 	inicializa();
 }
