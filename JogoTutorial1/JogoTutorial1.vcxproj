@@ -146,10 +146,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimacaoEstatica.cpp" />
+    <ClCompile Include="AnimacaoIndividual.cpp" />
     <ClCompile Include="AnimacaoMovimento.cpp" />
     <ClCompile Include="Ente.cpp" />
     <ClCompile Include="Entidade.cpp" />
     <ClCompile Include="EntidadeEstatica.cpp" />
+    <ClCompile Include="EntidadeMoviemento.cpp" />
     <ClCompile Include="Fase.cpp" />
     <ClCompile Include="Fase1.cpp" />
     <ClCompile Include="Fase2.cpp" />
@@ -175,12 +177,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimacaoEstatica.h" />
+    <ClInclude Include="AnimacaoIndividual.h" />
     <ClInclude Include="AnimacaoMovimento.h" />
     <ClInclude Include="CoordenadaTL.h" />
     <ClInclude Include="Elemento.h" />
     <ClInclude Include="Ente.h" />
     <ClInclude Include="Entidade.h" />
     <ClInclude Include="EntidadeEstatica.h" />
+    <ClInclude Include="EntidadeMoviemento.h" />
     <ClInclude Include="Fase.h" />
     <ClInclude Include="Fase1.h" />
     <ClInclude Include="Fase2.h" />

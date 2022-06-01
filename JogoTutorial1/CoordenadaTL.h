@@ -26,6 +26,9 @@ public:
 	void atualizarX(TL x);
 	void atualizarY(TL y);
 
+	void atualizarXNegativo(TL x);
+	void atualizarYNegativo(TL y);
+
 	void operator=(Coordenada<TL> outro);
 	void operator+=(Coordenada<TL> outro);
 	void operator-=(Coordenada<TL> outro);
@@ -85,6 +88,20 @@ template<typename TL>
 inline void Coordenada<TL>::atualizarY(TL y)
 {
 	this->y += y;
+}
+
+/* Função para atualizar x subtraindo a partir de um valor já atribuido */
+template<typename TL>
+inline void Coordenada<TL>::atualizarXNegativo(TL x)
+{
+	this->x -= x;
+}
+
+/* Função para atualizar y subtraindo a partir de um valor já atribuido */
+template<typename TL>
+inline void Coordenada<TL>::atualizarYNegativo(TL y)
+{
+	this->x -= y;
 }
 
 /* Operador para igualar x e y*/
