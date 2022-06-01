@@ -19,7 +19,7 @@ class Entidade : public Ente
 protected:
 	ID id;
 	sf::RectangleShape body;
-	//sf::RenderWindow *window;
+	CoordF proximaPosicao;
 
 public:
 	Entidade(CoordF pos = CoordF(0.0f, 0.0f), CoordF tam = CoordF(0.0f, 0.0f), ID ind = vazio);
@@ -31,6 +31,7 @@ public:
 	virtual void colisao(Entidade* outraEntidade, CoordF interseccao) = 0;
 
 	sf::RectangleShape* getBody();
+	CoordF getProximaPosicao();
 	//void setWindow(sf::RenderWindow* w) { this->window = w; }
 	//void draw() { window->draw(body); }
 };

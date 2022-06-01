@@ -9,7 +9,7 @@ parede(new Obst_A(CoordF(250.f, 250.f), CoordF((100.f), (100.f)))),
 parede1(new Obst_A(CoordF(500.f, 500.f), CoordF((100.f), (100.f))))
 {
     LES->adicionarEntidade(player1);
-    LES->adicionarEntidade(parede);
+    LES->adicionarEntidade(parede); 
     LES->adicionarEntidade(parede1);
 
     //player1 = new Jogador();
@@ -40,8 +40,9 @@ void Jogo::executar()
     {
         GerenciadorEventos->pollEvents();
         player1->move();
-        GerenciadorGrafico->clearWindow();
         GerenciadorColisoes->checkColisoes();
+        player1->atualizarPos();
+        GerenciadorGrafico->clearWindow();
         GerenciadorGrafico->render(player1->getBody());
         GerenciadorGrafico->render(parede->getBody());
         GerenciadorGrafico->render(parede1->getBody());

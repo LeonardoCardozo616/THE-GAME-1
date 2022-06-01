@@ -1,7 +1,7 @@
 #include "Jogador.h"
 //#include <iostream>
 
-#define velMov 0.3f
+#define velMov 0.5f
 
 Jogador::Jogador(int vidas, CoordF vel, CoordF pos, CoordF tam, ID ind):
 Personagem(vidas, vel, pos, tam, ind)
@@ -13,18 +13,12 @@ Jogador::~Jogador()
 {
 }
 
-void Jogador::colisao(Entidade* outraEntidade, CoordF interseccao)
+void Jogador::colisao(Entidade* Entidade2, CoordF interseccao)
 {
-    //std::cout << "x: " << interseccao.getX() << " y: " << interseccao.getY() << std::endl;
-    /*
-    if (chaBounds.left < wallBounds.left
-        && chaBounds.left + chaBounds.width < wallBounds.left + wallBounds.width
-        && chaBounds.top < wallBounds.top + wallBounds.height
-        && chaBounds.top + chaBounds.height > wallBounds.top)
-    */
-
+    reposicionarColisao(Entidade2->getPosicao(), Entidade2->getTamanho(), interseccao);
 }
 
+/* Coleta input do teclado e atualiza a posição futura do jogador*/
 void Jogador::move()
 {
     velocidade *= 0;
@@ -46,10 +40,7 @@ void Jogador::move()
         velocidade.atualizarY(-velMov);
     }
 
-    posicao.atualizarX(velocidade.getX());
-    posicao.atualizarY(velocidade.getY());
+    proximaPosicao = posicao + velocidade;
 
     //std::cout << "x: " << posicao.getX() << " y: " << posicao.getY() << std::endl;
-
-    body.move(sf::Vector2f(velocidade.getX(), velocidade.getY()));
 }
