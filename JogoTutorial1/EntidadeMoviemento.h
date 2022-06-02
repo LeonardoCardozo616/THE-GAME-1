@@ -1,5 +1,7 @@
 #pragma once
 #include "Entidade.h"
+#include "AnimacaoMovimento.h"
+
 class EntidadeMovimento :
     public Entidade
 {
@@ -9,7 +11,7 @@ protected:
     bool AEsquerda;
     unsigned int dano;
 
-    //AnimacaoMovimento sprite
+    AnimacaoMovimento sprite;
 public:
     EntidadeMovimento(CoordF pos = CoordF(0.0f, 0.0f), CoordF tam = CoordF(0.0f, 0.0f), ID ind = ID::vazio, CoordF vel = CoordF(0.0f, 0.0f));
     ~EntidadeMovimento() { }

@@ -5,7 +5,7 @@
 #define LARGURA 1280
 #define ALTURA 720
 
-Gerenciador_Grafico* Gerenciador_Grafico::instancia = nullptr;
+//Gerenciador_Grafico* Gerenciador_Grafico::instancia = nullptr;
 
 
 Gerenciador_Grafico::Gerenciador_Grafico() :
@@ -23,7 +23,7 @@ Gerenciador_Grafico::~Gerenciador_Grafico()
 	
 	delete Window;
 }
-
+/*
 //Instancia inicia a construtora de gerenciamento gráfico
 Gerenciador_Grafico* Gerenciador_Grafico::getInstancia()
 {
@@ -33,7 +33,7 @@ Gerenciador_Grafico* Gerenciador_Grafico::getInstancia()
 
 	return instancia;
 }
-
+*/
 sf::RenderWindow* Gerenciador_Grafico::getWindow() const
 {
 	return Window;

@@ -1,10 +1,10 @@
 #include "AnimacaoEstatica.h"
 
-Gerenciador_Grafico* AnimacaoEstatica::pGerenGrafico = Gerenciador_Grafico::getInstancia();
 
 AnimacaoEstatica::AnimacaoEstatica() :
-	body(),
-	textura(nullptr)
+body(),
+textura(nullptr),
+pGerenGrafico()
 {
 }
 
@@ -12,6 +12,7 @@ AnimacaoEstatica::~AnimacaoEstatica()
 {
 }
 
+/*Cria a textura do objeto e define sua posição e tamanho*/
 void AnimacaoEstatica::inicializa(const char* path, CoordF posicao, CoordF tamanho)
 {
 	textura = pGerenGrafico->loadTextura(path);
@@ -22,11 +23,13 @@ void AnimacaoEstatica::inicializa(const char* path, CoordF posicao, CoordF taman
 	body.setTexture(textura);
 }
 
+/*Atualiza a posição*/
 void AnimacaoEstatica::update(CoordF posicao)
 {
 	body.setPosition(Vector2f(posicao.getX(), posicao.getY()));
 }
 
+/*Renderiza o gerenciador gráfico*/
 void AnimacaoEstatica::render()
 {
 	pGerenGrafico->render(&body);

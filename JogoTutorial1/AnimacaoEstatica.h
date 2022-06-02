@@ -5,7 +5,7 @@ class AnimacaoEstatica
 private:
 	Texture* textura;
 	RectangleShape body;
-	static Gerenciador_Grafico* pGerenGrafico;
+	Gerenciador_Grafico* pGerenGrafico;
 public:
 	AnimacaoEstatica();
 	~AnimacaoEstatica();

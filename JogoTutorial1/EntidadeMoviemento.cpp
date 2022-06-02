@@ -2,8 +2,8 @@
 
 /*Construtora*/
 EntidadeMovimento::EntidadeMovimento(CoordF pos, CoordF tam, ID ind, CoordF vel):
-	Entidade(pos, tam, ind)
-	//sprite()
+	Entidade(pos, tam, ind),
+	sprite()
 {
 	ativo = true;
 	velocidade = vel;
