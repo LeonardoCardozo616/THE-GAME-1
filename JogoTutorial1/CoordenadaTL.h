@@ -24,8 +24,8 @@ public:
 	void setX(TL x);
 	void setY(TL y);
 
-	void atualizarX(TL x);
-	void atualizarY(TL y);
+	void atualizarX(TL cx);
+	void atualizarY(TL cy);
 
 	void calculaAbs();
 
@@ -78,16 +78,16 @@ inline void Coordenada<TL>::setY(TL y)
 
 /* Função para atualizar x a partir de um valor já atribuido */
 template<typename TL>
-inline void Coordenada<TL>::atualizarX(TL x)
+inline void Coordenada<TL>::atualizarX(TL cx)
 {
-	this->x += x;
+	this->x = this->x + cx;
 }
 
 /* Função para atualizar y a partir de um valor já atribuido */
 template<typename TL>
-inline void Coordenada<TL>::atualizarY(TL y)
+inline void Coordenada<TL>::atualizarY(TL cy)
 {
-	this->y += y;
+	this->y = this->y + cy;
 }
 
 template<typename TL>
@@ -107,8 +107,8 @@ void Coordenada<TL>::operator=(Coordenada<TL> outro)
 template<typename TL>
 void Coordenada<TL>::operator+=(Coordenada<TL> outro)
 {
-	this->x += outro.getX();
-	this->y += outro.getY();
+	this->x = this->x + outro.getX();
+	this->y = this->y + outro.getY();
 }
 
 template<typename TL>

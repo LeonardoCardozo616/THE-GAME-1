@@ -1,9 +1,8 @@
 #include "Inimigo.h"
 
-Inimigo::Inimigo()
+Inimigo::Inimigo(int vidas, CoordF des, CoordF pos, CoordF tam, ID ind):
+Personagem(vidas, des, pos, tam, ind)
 {
-	body.setFillColor(sf::Color::Magenta);
-	body.setPosition(sf::Vector2f(300.f, 300.f));
 }
 
 Inimigo::~Inimigo()

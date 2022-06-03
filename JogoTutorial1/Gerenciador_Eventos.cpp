@@ -16,7 +16,7 @@ Gerenciador_Eventos::~Gerenciador_Eventos()
     pWindow = NULL;
 }
 
-void Gerenciador_Eventos::pollEvents()
+void Gerenciador_Eventos::verificarEvents()
 {
 	sf::Event event;
 

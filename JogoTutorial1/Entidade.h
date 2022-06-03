@@ -20,19 +20,16 @@ protected:
 	ID id;
 	sf::RectangleShape body;
 	CoordF proximaPosicao;
+	bool estaNoAr;
 
 public:
 	Entidade(CoordF pos = CoordF(0.0f, 0.0f), CoordF tam = CoordF(0.0f, 0.0f), ID ind = vazio);
 	~Entidade();
 	ID getID() const;
-	//virtual void render() = 0;
-	//virtual void update(const float dt) = 0;
-	//virtual void inicializa() = 0;
-	virtual void colisao(Entidade* outraEntidade, CoordF interseccao) = 0;
+	virtual void colisao(Entidade* outraEntidade, CoordF interseccao, bool* estaNoChao) = 0;
+	void setEstaNoAr(bool noAr);
 
 	sf::RectangleShape* getBody();
 	CoordF getProximaPosicao();
-	//void setWindow(sf::RenderWindow* w) { this->window = w; }
-	//void draw() { window->draw(body); }
 };
 

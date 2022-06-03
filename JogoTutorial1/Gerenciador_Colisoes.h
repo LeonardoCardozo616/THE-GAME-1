@@ -12,7 +12,6 @@ public:
 	Gerenciador_Colisoes(ListaEntidades* LE); //ListaEntidades* ListaMoveis = NULL, ListaEntidades* ListaFixas = NULL);
 	~Gerenciador_Colisoes();
 
-	void checkColisoes();
-	void handleColisoes();
+	void checarColisoes();
 };
 

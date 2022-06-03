@@ -89,12 +89,12 @@ public:
 			pPrimeiro = tmp->getPprox();
 			delete tmp;
 			tmp = pPrimeiro;
+			i++;
 		}
 
 		pUltimo = nullptr;
 		len = 0;
 	}
-	//void pop&delete(TL* item);
 };
 
 template<class TL>

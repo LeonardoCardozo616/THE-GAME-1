@@ -4,13 +4,14 @@
 using namespace sf;
 #include"CoordenadaTL.h"
 #include <map>
+#include "Personagem.h"
 using namespace std;
 
 class Gerenciador_Grafico
 {
 private:
-	sf::RenderWindow* Window;
-	//sf::View view;
+	sf::RenderWindow* window;
+	sf::View* view;
 	map<const char*, Texture*> mapaTextura;
 	
 public:
@@ -23,5 +24,6 @@ public:
 	void render(sf::RectangleShape* body);
 	void display();
 	void closeWindow();
+	void centralizarView(Ente* pEnte);
 	sf::Texture* loadTextura(const char* path);
 };

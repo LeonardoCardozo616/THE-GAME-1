@@ -40,6 +40,22 @@ float Ente::getAltura()
 	return tamanho.getY();
 }
 
-void Ente::imprimir()
+float Ente::getEsquerda()
 {
+	return posicao.getX();
+}
+
+float Ente::getDireita()
+{
+	return posicao.getX() + tamanho.getX();
+}
+
+float Ente::getCima()
+{
+	return posicao.getY();
+}
+
+float Ente::getBaixo()
+{
+	return posicao.getY() + tamanho.getY();
 }

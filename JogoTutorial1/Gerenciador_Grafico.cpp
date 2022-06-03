@@ -5,12 +5,13 @@
 #define LARGURA 1280
 #define ALTURA 720
 
-
 Gerenciador_Grafico::Gerenciador_Grafico() :
-Window(new sf::RenderWindow(sf::VideoMode(LARGURA, ALTURA), "Jogo", sf::Style::Titlebar | sf::Style::Close)),
+window(new sf::RenderWindow(sf::VideoMode(LARGURA, ALTURA), "Jogo", sf::Style::Titlebar | sf::Style::Close)),
+view(new sf::View(sf::Vector2f(LARGURA / 2.f, ALTURA / 2.f), sf::Vector2f((float) LARGURA, (float) ALTURA))),
 mapaTextura()
 {
-
+	window->setView(*view);
+	window->setFramerateLimit(60);
 }
 
 Gerenciador_Grafico::~Gerenciador_Grafico()
@@ -19,40 +20,57 @@ Gerenciador_Grafico::~Gerenciador_Grafico()
 		delete (it->second);
 	}
 	
-	delete Window;
+	delete window;
+	delete view;
 }
 
 sf::RenderWindow* Gerenciador_Grafico::getWindow() const
 {
-	return Window;
+	return window;
 }
 
 bool Gerenciador_Grafico::isWindowOpen()
 {
-	return Window->isOpen();
+	return window->isOpen();
 }
 
 void Gerenciador_Grafico::clearWindow()
 {
-	Window->clear();
+	window->clear();
 }
 
 void Gerenciador_Grafico::render(sf::RectangleShape* body)
 {
-	Window->draw(*body);
+	window->draw(*body);
 }
 
 void Gerenciador_Grafico::display()
 {
 	if (isWindowOpen())
 	{
-		Window->display();
+		window->display();
 	}
 }
 
 void Gerenciador_Grafico::closeWindow()
 {
-	Window->close();
+	window->close();
+}
+
+/* Função para ajustar a view de acordo de com a posição de 
+   determinado ente, geralmente o jogador
+   ATENCAO - TAVA USANDO ENTE AGR USO PERSONAGEM */
+void Gerenciador_Grafico::centralizarView(Ente* pEnte)
+{
+	if (pEnte->getDireita() > LARGURA / 2.f)
+	{
+		view->setCenter(sf::Vector2f(pEnte->getDireita(), pEnte->getCima()));//ALTURA / 2 + (pEnte->getCima() - ALTURA / 2)/5));
+	}
+	else
+	{
+		view->setCenter(sf::Vector2f(LARGURA / 2.f, pEnte->getCima()));
+	}
+	window->setView(*view);
 }
 
 sf::Texture* Gerenciador_Grafico::loadTextura(const char* path)

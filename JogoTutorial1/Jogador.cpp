@@ -1,46 +1,64 @@
 #include "Jogador.h"
 //#include <iostream>
 
-#define velMov 0.5f
+#define VELMOV 300.f
+#define VELPULO 360.f
 
-Jogador::Jogador(int vidas, CoordF vel, CoordF pos, CoordF tam, ID ind):
-Personagem(vidas, vel, pos, tam, ind)
+Jogador::Jogador(int vidas, CoordF des, CoordF pos, CoordF tam, ID ind):
+Personagem(vidas, des, pos, tam, ind)
 {
-    body.setFillColor(sf::Color::Yellow);
+    body.setFillColor(sf::Color::Cyan);
 }
 
 Jogador::~Jogador()
 {
 }
 
-void Jogador::colisao(Entidade* Entidade2, CoordF interseccao)
+void Jogador::colisao(Entidade* Entidade2, CoordF interseccao, bool* estaNoChao)
 {
-    reposicionarColisao(Entidade2->getPosicao(), Entidade2->getTamanho(), interseccao);
+
+    if (Entidade2->getID() == inimigo_A)
+    {
+        if (fabs(interseccao.getX()) > (interseccao.getY()))
+        {
+
+        }
+
+        num_vidas--;
+        cout << "num_vidas: " << num_vidas << endl;
+        if (num_vidas <= 0)
+        {
+            body.setFillColor(sf::Color::Yellow);
+        }
+    }
+
+    reposicionarColisao(Entidade2->getPosicao(), Entidade2->getTamanho(), interseccao, estaNoChao);
 }
 
-/* Coleta input do teclado e atualiza a posição futura do jogador*/
-void Jogador::move()
+/* Coleta input do teclado e atualiza a posição futura do jogador */
+void Jogador::move(float dt)
 {
-    velocidade *= 0;
+    deslocamento.setX(0.f);
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
-        velocidade.atualizarX(velMov);
+        deslocamento.atualizarX(VELMOV * dt);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
-        velocidade.atualizarX(-velMov);
+        deslocamento.atualizarX(-VELMOV * dt);
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::W)) && (estaNoAr == false))
     {
-        velocidade.atualizarY(velMov);
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-    {
-        velocidade.atualizarY(-velMov);
+        deslocamento.atualizarY(-VELPULO * dt);
+        estaNoAr = true;
     }
 
-    proximaPosicao = posicao + velocidade;
+    // Caso entidade estiver no ar, aplica aceleração da gravidade
+    if (estaNoAr == true)
+    {
+        deslocamento.atualizarY(GRAVIDADE * dt);
+    }
 
-    //std::cout << "x: " << posicao.getX() << " y: " << posicao.getY() << std::endl;
+    proximaPosicao = posicao + deslocamento;
 }

@@ -13,5 +13,5 @@ public:
 	Gerenciador_Eventos(Gerenciador_Grafico *GerenciadorGrafico);
 	~Gerenciador_Eventos();
 
-	void pollEvents();
+	void verificarEvents();
 };
